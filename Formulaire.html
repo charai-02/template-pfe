@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULAIRE</title>
+   <!--bootstrap-->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"><!--Css Stylesheet-->
+   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/list-groups/">
+   <link href="list-groups.css" rel="stylesheet">
+   <link rel="stylesheet" href="product.css">
+   <link rel="stylesheet" href="general.css">
+   <link rel="stylesheet" href="header.css">
+   <!--GOOGLE_FONTS-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <style>
+    * , h1{
+      color:black;
+      
+    }
+   textarea::placeholder{
+      color:rgb(0, 0, 0);
+    }
+  </style>
+  <!--header-->
+  <div class="sticky-top shadow p-3 bg-body-tertiary white row">
+    <div class="d-flex flex-row justify-content-between col-12">
+      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><img src="icons/list.svg"  width="30px" height="30px" style="margin-top:0px" class="img-fluid"></button>
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+         <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel"> 
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="ابحث عن منتجات..." aria-label="Search">
+                  <button class="btn btn-outline-dark" type="submit">ابحث</button>
+                </form>
+              </div>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="margin-right:10px; margin-left:10px;"></button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <div class="d-flex flex-column mb-3">
+              <div class="p-2">
+                <a href="index.html" style="text-decoration:none; color:black;">الصفحة الرئيسية </a>
+              </div>
+              <div class="p-2">
+                <a href="Atasnifat.html" style="text-decoration:none; color:black;">التصنيفات</a>
+              </div>
+                <div class="p-2"> 
+                  <a href="Contact-us.html"  style="text-decoration:none; color:black;">اتصل بنا </a>
+                </div>
+            </div>
+            <div style="margin-top:50px;"><a href="index.html"><img src="Laneige.jpeg" class="logo shadow img-fluid container"></a> </div>
+        </div>
+      </div>
+        <a href="index.html"><img src="Laneige.jpeg" class="logo img-fluid " style="margin-right:5px; margin-left:5px;"> </a>  
+        <button class="btn" style="padding-left:8px; padding-right:25px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#my-bag-offcanvas" aria-controls="my-bag-offcanvas" style="margin:2px;">
+          <img width="30px" height="30px" class="img-fluid" src="Icons/shopping-cart.png">
+        </button>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="my-bag-offcanvas" aria-labelledby="my-bag-offcanvas-label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="my-bag-offcanvas-label">سلة مشترياتي</h5>
+            <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul id="bag-items" style="height: 65%;">
+              <div class="hstack gap-2"> 
+                <div class="p-2"><img src=""></div> 
+                <div class="p-2">
+                  <h4 id="productname"></h4>
+                </div> 
+              </div>
+            </ul>
+            <div class="foot d-flex flex-row justify-content-between align-items-center">
+              <h6>الثمن الإجمالي</h6>
+              <h6>DH</h6>
+            </div>
+            <hr>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+            <button class="fcta-btn container mb-2 btn w-100" style="height:8%"  onclick="window.location.href='formulaire.html';"  > شراء الآن</BUTTON>
+            <button class="btn btn-outline-secondary container" style="height:8%" data-bs-dismiss="offcanvas"> استمر في التسويق</BUTTON>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- main -->
+  <br><br>
+  <h1 class="text-center">الدفع</h1>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-8 order-2 order-md-1"><div class="d-flex flex-row container-fluid align-items-center">
+        <div style="margin:10px;" class="col-12 justify-content-center">
+         <br>
+            <form class="form-group container" >
+              <h4 class="text-end" style="margin-top:10px"> معلومات الزبون</h4>
+              <div class="row container w-100"><div class="col-12 mb-10" >
+                <label for="Tel"> الإسم الكامل</label>
+                <input type="text" class="form-control" placeholder="الإسم الكامل">
+               </div></div>
+            <div class="row container"><div class="col-12 mb-10" >
+             <label for="Tel"> البلد</label>
+             <input type="text" class="form-control" placeholder="البلد">
+            </div></div>
+            <div class="row mb-10 container">
+              <div class="col-12 mb-10">
+             <label for="City">المدينة</label>
+             <input type="text" class="form-control mb-10" placeholder="المدينة">
+             </div>
+            </div>
+            <div class="row container"><div class="col-12 mb-10" >
+              <label for="code postal"> code postal</label>
+              <input type="text" class="form-control" placeholder=" code postal">
+             </div></div>
+             <div class="row container"><div class="col-12 mb-10" >
+              <label for="Tel"> رقم الهاتف</label>
+              <input type="text" class="form-control" placeholder="رقم الهاتف">
+             </div></div>
+             <div class="row container"><div class="col-12 mb-10" >
+              <label for="Tel"> البريد الإلكتروني </label>
+              <input type="text" class="form-control" placeholder="البريد الإلكتروني">
+             </div></div>
+             <div class="row container" ><div class="col-12 mb-10" >
+              <label for="notes"> ملاحظات أو إضافات </label>
+              <textarea type="text" class="form-control" placeholder="إضافات أو ملاحظات" heigth="200px">
+                </textarea>
+               
+             </div></div>
+             <div class="row container">
+              <div class="col-12 mb-10" >
+             <button type="submit" class="fcta-btn btn text w-100 " style="margin-top:10px; height:50px; "><span class="margin-bottom:0px">تأكيد الطلب</span></button>
+            </div>
+          </div>
+          </div>
+            </form> 
+        </div>
+      </div>
+      <div class="col-md-4 justify-content-center order-1 order-md-2"> 
+         <div style="margin-top: 30px;" class="col-12 ">
+          <h4 class="text-end mb-4 lightgray">المنتجات</h4>
+          <ul class="list-group" style="padding:0px !important;">
+            <li class="list-group-item">
+             <div class="d-flex flex-column justify-content-center">
+              <div class="d-flex flex-row align-items-center justify-content-between">
+                <h6>المنتج الأول</h6>
+                <span>105 درهم</span>
+              </div>
+              <p style="color:lightgrey; text-align:start" font-size="3px;">وصف المنتج</p>
+             </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex flex-column justify-content-center">
+                <div class="d-flex flex-row align-items-center justify-content-between">
+                  <h6>المنتج الأول</h6>
+                  <span>105 درهم</span>
+                </div>
+                <p style="color:lightgrey; text-align:start " font-size="3px;">وصف المنتج</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex flex-column justify-content-center">
+                <div class="d-flex flex-row align-items-center justify-content-between">
+                  <h6>المنتج الأول</h6>
+                  <span>105 درهم</span>
+                </div>
+                <p style="color:lightgrey; text-align:start" font-size="3px;" >وصف المنتج</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex flex-column justify-content-center">
+                <div class="d-flex flex-row align-items-center justify-content-between">
+                  <h6> إجمالي سلة المشتريات</h6>
+                  <span>الثمن درهم</span>
+                </div>
+                <p style="color:lightgrey; text-align:start" font-size="3px;">  المجموع : </p>
+             </div>
+            </li>
+          </ul>
+          <div class="list-group list-group-radio d-grid gap-2 border border-gray container" style="margin-top:10px;">
+            <div class="position-relative M-10">
+              <input class="form-check-input position-absolute top-50 end-0 me-3 fs-5" type="radio" name="listGroupRadioGrid" id="listGroupRadioGrid1" value="" checked="">
+              <label class="list-group-item py-3 pe-5" for="listGroupRadioGrid1">
+                <strong class=" text-end text" style="visibility: initial; text-align:start;">الشحن </strong>
+                <span class="d-block small opacity-75 text"  style="visibility: initial; text-align:start;">  50 درهم</span>
+              </label>
+            </div>
+          </div>
+       </div>
+       <div class="container d-flex flex-row justify-content-between align-items-center">
+        <button type="button" class="text fcta-btn btn" style="margin:10px; height:50px;" ><span class="margin-bottom:0rem "><i class="bi bi-arrow-right" style="margin:2px;"></i>متابعة التسويق </span></button>
+        <button type="button" class="btn fcta-btn text" style="margin:10px; height:50px;"><span class="margin-bottom:0px">تأكيد الطلب</span></button>
+       </div>
+     </div>
+   </div>
+ </div>
+  <!-- footer -->
+  <hr style="color:rgb(164, 163, 163)">
+  <div class="d-flex align-items-center justify-content-center container">
+  <img src="Laneige.jpeg" class="logo"> </div>
+  <hr style="color:rgb(164, 163, 163)">
+  <div class="container text-center">
+    <br>
+    <div class="row">
+      <div class="col col-md-4 col-xs-12 ">
+        <div class="text text-center mb-0 p-0" style="font-weight:bold">اتصل بنا</div>
+        <hr width="25%" class="sm-line">
+      
+        <div>
+        <a href="Contact-us.html"> <p style="font-size:12px">اتصل بنا</p></a>
+        </div>
+      </div>
+      <div class="col col-xs-12 col-md-4">
+        <div class= "text-center text" style="font-weight:bold">الشروط و السياسة</div>
+        <hr width="25%" class="sm-line">
+        <div>
+          <a href="Conditionsofuse.html"> <P style="font-size:12px">شروط اللإستخدام</P></a>
+          <a href="return&replacements.html"><p style="font-size:12px">سياسة اللإستبدال و الإسترجاع </p></a>
+        </div>
+      </div>
+      <div class="col col-xs-12 col-md-4 text" style="font-weight:bold">
+        عن المتجر
+        <hr width="25%" class="sm-line">
+      </div>
+    </div>
+  </div>
+
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+ </body>
+</html>
